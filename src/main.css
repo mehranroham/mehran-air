@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Stencil';
+    src: url(../public/fonts/Stencil/898StencilFaNum.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'IRANSans-Medium';
+    src: url(../public/fonts/IranSans-X/IRANSansXFaNum-Medium.woff2)
+      format('woff2');
+  }
+}
