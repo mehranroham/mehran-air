@@ -6,12 +6,12 @@ export default function App({ placeHolder }) {
   const { cities } = useContext(AppContextApi);
 
   return (
-    <div className='w-52 flex flex-col gap-4'>
+    <div className='w-48 flex flex-col gap-4'>
       <Autocomplete
         variant='bordered'
         defaultItems={cities}
         label={placeHolder}
-        className='max-w-xs'
+        className='max-w-xs h-10'
         size='sm'
         onSelectionChange={(event) => console.log(event)}
       >

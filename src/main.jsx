@@ -7,7 +7,7 @@ import App from './routes/App.jsx';
 import NavBar from './routes/NavBar.jsx';
 import About from './routes/About.jsx';
 
-import AppContext from './context/AppContext.jsx';
+import AppContextProvider from './context/AppContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppContext>
+    <AppContextProvider>
       <RouterProvider router={router} />
-    </AppContext>
+    </AppContextProvider>
   </React.StrictMode>
 );
