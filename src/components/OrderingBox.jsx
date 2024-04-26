@@ -25,7 +25,7 @@ export default function OrderingBox() {
   };
 
   return (
-    <div className='absolute flex flex-col gap-7 items-start px-10 py-3 w-[75%] bg-gray-50 top-[62%] right-[50%] translate-x-[50%] rounded-2xl'>
+    <div className='absolute flex flex-col gap-7 items-start px-10 py-3 w-[75%] bg-gray-50 top-[400px] right-[50%] translate-x-[50%] rounded-2xl'>
       {/* absolute box */}
       <AppBoxes />
       {/* getting information */}

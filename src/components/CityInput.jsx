@@ -13,7 +13,7 @@ export default function App({ placeHolder, value }) {
         label={placeHolder}
         className='max-w-xs h-10'
         size='sm'
-        onSelectionChange={(e) => setCityHandler(e, value)}
+        onChange={(e) => setCityHandler(e, value)}
       >
         {(item) => (
           <AutocompleteItem className='font-IRANSans-Medium' key={item.value}>

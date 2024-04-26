@@ -11,7 +11,6 @@ export const cities = [
     value: 'تهران',
     label: 'تهران شهر',
   },
-  { value: 'تبریز', label: 'تبریز شهر' },
   { value: 'یزد', label: 'یزد شهر' },
   {
     value: 'ملایر',
