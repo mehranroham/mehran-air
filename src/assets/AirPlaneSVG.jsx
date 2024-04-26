@@ -3,7 +3,7 @@ import React from 'react';
 export default function AirPlaneSVG() {
   return (
     <svg
-      className='w-32 h-32 absolute right-[25%] top-5'
+      className='w-28 h-28 absolute right-[27%] top-5 rotate-[13deg]'
       xmlns='http://www.w3.org/2000/svg'
       width='800'
       height='800'

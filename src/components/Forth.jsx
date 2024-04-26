@@ -1,13 +1,18 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Calendar } from '@nextui-org/react';
 import { I18nProvider } from '@react-aria/i18n';
+import { AppContextApi } from '../context/AppContext';
+import { today, getLocalTimeZone } from '@internationalized/date';
 
 export default function App() {
+  const { setDateHandler } = useContext(AppContextApi);
+
   return (
-    <div lang='fa' dir='ltr' className='font-IRANSans-Medium'>
+    <div className='font-IRANSans-Medium'>
       <I18nProvider locale='fa-IR-u-ca-persian'>
         <Calendar
-          onChange={(e) => console.log(e.year, e.month, e.day)}
+          defaultValue={today(getLocalTimeZone())}
+          onChange={(e) => setDateHandler(e, 'oneWay')}
           aria-label='Date (International Calendar)'
         />
       </I18nProvider>

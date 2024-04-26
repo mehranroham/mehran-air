@@ -1,22 +1,21 @@
-import React from 'react';
+import { useContext } from 'react';
 import { RangeCalendar } from '@nextui-org/react';
 import { I18nProvider } from '@react-aria/i18n';
+import { AppContextApi } from '../context/AppContext';
+import { today, getLocalTimeZone } from '@internationalized/date';
 
 export default function BackAndForth() {
+  const { setDateHandler } = useContext(AppContextApi);
+
   return (
-    <div lang='fa' dir='ltr' className='font-IRANSans-Medium'>
+    <div className='font-IRANSans-Medium'>
       <I18nProvider locale='fa-IR-u-ca-persian'>
         <RangeCalendar
-          onChange={(e) =>
-            console.log(
-              e.start.year,
-              e.start.month,
-              e.start.day,
-              e.end.year,
-              e.end.month,
-              e.end.day
-            )
-          }
+          defaultValue={{
+            start: today(getLocalTimeZone()),
+            end: today(getLocalTimeZone()).add({ days: 3 }),
+          }}
+          onChange={(e) => setDateHandler(e, 'backAndForth')}
           aria-label='Date (International RangeCalendar)'
         />
       </I18nProvider>

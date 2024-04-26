@@ -17,6 +17,7 @@ export default {
     fontFamily: {
       Stencil: 'Stencil',
       'IRANSans-Medium': 'IRANSans-Medium',
+      AzarMehr: 'AzarMehr',
     },
     extend: {},
   },

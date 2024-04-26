@@ -12,4 +12,8 @@
     src: url(../public/fonts/IranSans-X/IRANSansXFaNum-Medium.woff2)
       format('woff2');
   }
+  @font-face {
+    font-family: 'AzarMehr';
+    src: url(../public/fonts/400-AzarMehr-FD-Regular.woff2) format('woff2');
+  }
 }
